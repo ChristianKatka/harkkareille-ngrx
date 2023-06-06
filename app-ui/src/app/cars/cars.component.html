@@ -1,0 +1,18 @@
+<main [style.margin-top.px]="70" [style.width]="'100%'">
+  <h1 style="text-align: center">Autot store esimerkki</h1>
+  <div>
+    <h2>Sinun luomasi autot:</h2>
+    <!-- <pre>{{ cars | json }}</pre> -->
+  </div>
+  <section *ngFor="let car of cars" [style.width]="'100%'">
+    <div class="mat-elevation-z3 flex-row align-center-center">
+      <div style="padding: 1rem">
+        <h3>id: {{ car.id }}</h3>
+        <h3>nimi: {{ car.name }}</h3>
+      </div>
+      <button mat-icon-button (click)="deleteCar(car.id)">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </div>
+  </section>
+</main>

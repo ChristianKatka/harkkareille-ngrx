@@ -1,0 +1,21 @@
+
+img {
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 4px 0px 0px 4px;
+}
+
+.car-card {
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.car-card:last-child {
+  margin-bottom: 25px;
+}
+
+
+.favorite{
+  color: red;
+}

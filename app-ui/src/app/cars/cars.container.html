@@ -1,0 +1,12 @@
+<main
+  [style.width]="'100%'"
+  fxLayout="column"
+  class="flex-row align-center-center"
+>
+  <section [style.width]="'95%'" *ngIf="cars$ | async let cars">
+    <app-cars [cars]="cars" (submitDeleteCar)="deleteCar($event)"></app-cars>
+    <app-cars-create-car
+      (createCarFormSubmit)="createCarSubmitted($event)"
+    ></app-cars-create-car>
+  </section>
+</main>

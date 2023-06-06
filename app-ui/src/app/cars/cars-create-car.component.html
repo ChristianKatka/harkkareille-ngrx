@@ -1,0 +1,31 @@
+<main [style.margin-top.px]="70">
+  <section class="mat-elevation-z2 flex-column" style="padding: 15px">
+    <h1>Luo auto</h1>
+
+    <form
+      class="flex-column"
+      fxLayoutAlign="center stretch"
+      [formGroup]="createCarForm"
+    >
+      <mat-form-field appearance="outline">
+        <mat-label>Auto nimi</mat-label>
+        <input
+          placeholder="Mersu"
+          matInput
+          type="text"
+          formControlName="name"
+        />
+      </mat-form-field>
+
+      <button
+        mat-flat-button
+        color="primary"
+        type="submit"
+        [disabled]="this.createCarForm.invalid"
+        (click)="submit()"
+      >
+        Tallenna
+      </button>
+    </form>
+  </section>
+</main>
